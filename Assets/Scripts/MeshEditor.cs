@@ -15,6 +15,7 @@ public class MeshEditor : MonoBehaviour
 
 	[SerializeField] private bool m_recalculateNormals;
 	[SerializeField] private bool m_recalculateBounds;
+	[SerializeField] private bool m_recalculateTangents;
 
 	private Mesh m_defaultMesh;
 	private Mesh m_currentMesh;
@@ -40,9 +41,11 @@ public class MeshEditor : MonoBehaviour
 		m_currentMesh.vertices = m_vertices;
 		m_currentMesh.triangles = m_triangles;
 
-		if(m_recalculateNormals)
-		m_currentMesh.RecalculateNormals();
-		if(m_recalculateBounds)
-		m_currentMesh.RecalculateBounds();
+		if (m_recalculateNormals)
+			m_currentMesh.RecalculateNormals();
+		if (m_recalculateBounds)
+			m_currentMesh.RecalculateBounds();
+		if (m_recalculateTangents)
+			m_currentMesh.RecalculateTangents();
 	}
 }

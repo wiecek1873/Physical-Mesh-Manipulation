@@ -254,8 +254,9 @@ MonoBehaviour:
   m_vertices: []
   m_triangles: 
   m_normals: []
-  m_recalculateNormals: 0
+  m_recalculateNormals: 1
   m_recalculateBounds: 0
+  m_recalculateTangents: 0
 --- !u!23 &876831183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -337,7 +338,11 @@ MonoBehaviour:
   - {x: -0.5, y: 0, z: 0.5}
   - {x: -0.5, y: 0, z: -0.5}
   - {x: 0.5, y: 0, z: -0.5}
-  m_triangles: 000000000100000002000000010000000200000003000000
+  - {x: 0.5, y: 0, z: 0.5}
+  - {x: -0.5, y: 0, z: 0.5}
+  - {x: -0.5, y: 0, z: -0.5}
+  - {x: 0.5, y: 0, z: -0.5}
+  m_triangles: 020000000100000000000000030000000200000000000000040000000500000006000000070000000400000006000000
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
