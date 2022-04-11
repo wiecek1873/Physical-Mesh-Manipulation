@@ -5,15 +5,13 @@ using UnityEngine;
 public class MeshFromCode : MonoBehaviour
 {
 	[HideInInspector] public Mesh GeneratedMesh;
-
-	[SerializeField] private Vector3[] m_vertices;
-	[SerializeField] private int[] m_triangles;
+	[SerializeField] private MeshData m_meshData;
 
 	private void Awake()
 	{
 		GeneratedMesh = new Mesh();
-		GeneratedMesh.vertices = m_vertices;
-		GeneratedMesh.triangles = m_triangles;
+		GeneratedMesh.vertices = m_meshData.Vertices;
+		GeneratedMesh.triangles = m_meshData.Triangles;
 
 		//Vector2[] uvs = new Vector2[m_vertices.Length];
 
